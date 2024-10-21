@@ -23,7 +23,7 @@ El script principal del repositorio, `start.sh`, realiza las siguientes acciones
 
    ```bash
    ./start.sh
-
+3.
 El script se encargará de instalar ArgoCD y desplegar los componentes de la aplicación de manera automática.
 
 ### Requisitos
