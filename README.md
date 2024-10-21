@@ -23,10 +23,10 @@ El script principal del repositorio, `start.sh`, realiza las siguientes acciones
 
    ```bash
    ./start.sh
-3.
+
 El script se encargará de instalar ArgoCD y desplegar los componentes de la aplicación de manera automática.
 
-### Requisitos
+## Requisitos
 
 	•	Clúster de Kubernetes configurado y funcionando.
 	•	Acceso administrativo al clúster (kubectl y permisos de instalación de aplicaciones).
@@ -34,7 +34,7 @@ El script se encargará de instalar ArgoCD y desplegar los componentes de la apl
 	•	kubectl
 	•	helm (opcional, dependiendo de la implementación del script)
 
-### Estructura del repositorio
+## Estructura del repositorio
 
 	•	start.sh: Script principal que ejecuta la instalación de ArgoCD y los microservicios.
 	•	manifests/: Archivos YAML que definen los microservicios y recursos de Kubernetes requeridos para el challenge.
@@ -45,6 +45,6 @@ Notas
 	•	Asegúrate de que tu clúster de Kubernetes está correctamente configurado antes de ejecutar el script.
 	•	El repositorio utiliza una URL pública de GitHub como fuente de los manifiestos de la aplicación, gestionada directamente por ArgoCD.
 
-### Licencia
+## Licencia
 
 Este repositorio es parte de un challenge técnico para Metafar y es de uso exclusivo para dicha empresa.
