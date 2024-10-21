@@ -18,14 +18,3 @@ spec:
       selfHeal: true
     syncOptions:
     - CreateNamespace=true
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: challenge-repo-secret
-  namespace: argocd
-  labels:
-    argocd.argoproj.io/secret-type: repository
-data:
-  url: aHR0cHM6Ly9naXRodWIuY29tL2pvdGl0YWRldi9jaGFsbGVuZ2UtbWV0YWZhci1rOHM=  # Base64 encoded repo URL (https://github.com/jotitadev/challenge-metafar-k8s)
-type: Opaque
