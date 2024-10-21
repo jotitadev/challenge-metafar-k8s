@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: metafar-vote
-        image: jotaalv/vote:latest
+        image: jotaalv/vote:20241021122829
         ports:
         - containerPort: 80
         resources:
