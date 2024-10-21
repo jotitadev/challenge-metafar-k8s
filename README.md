@@ -18,12 +18,12 @@ El script principal del repositorio, `start.sh`, realiza las siguientes acciones
 
    ```bash
    git clone https://github.com/jotitadev/challenge-metafar-k8s.git
-
+   ```
 2.	Ejecutar el script start.sh para iniciar el proceso de instalación:
 
    ```bash
    ./start.sh
-
+   ```
 El script se encargará de instalar ArgoCD y desplegar los componentes de la aplicación de manera automática.
 
 ## Requisitos
