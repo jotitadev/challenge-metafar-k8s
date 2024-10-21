@@ -27,5 +27,5 @@ metadata:
   labels:
     argocd.argoproj.io/secret-type: repository
 data:
-  url: aHR0cHM6Ly9naXRodWIuY29tL2pvdGl0YWRldi9jaGFsbGVuZ2UtbWV0YWZhci1rOHM=  # Base64 encoded repo URL (https://github.com/jotitadev/challenge-infra-malafar-k8s)
+  url: aHR0cHM6Ly9naXRodWIuY29tL2pvdGl0YWRldi9jaGFsbGVuZ2UtbWV0YWZhci1rOHM=  # Base64 encoded repo URL (https://github.com/jotitadev/challenge-metafar-k8s)
 type: Opaque
