@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: metafar-result
-        image: jotaalv/metafar-result:20241020191042
+        image: jotaalv/result:20241020191042
         ports:
         - containerPort: 80
         resources:

@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: metafar-worker
-        image: jotaalv/metafar-worker:latest
+        image: jotaalv/worker:latest
         ports:
         - containerPort: 80
         resources:
