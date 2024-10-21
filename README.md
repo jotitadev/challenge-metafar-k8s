@@ -19,7 +19,13 @@ El script principal del repositorio, `start.sh`, realiza las siguientes acciones
    ```bash
    git clone https://github.com/jotitadev/challenge-metafar-k8s.git
    ```
-2.	Ejecutar el script start.sh para iniciar el proceso de instalación:
+2.	Dar permisos de ejecución:
+
+   ```bash
+   chmod +x ./start.sh
+   ```
+
+3.  Ejecutar el script start.sh para iniciar el proceso de instalación:
 
    ```bash
    ./start.sh
