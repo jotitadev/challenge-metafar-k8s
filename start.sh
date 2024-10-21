@@ -13,7 +13,7 @@ helm install argocd argo/argo-cd --namespace argocd
 echo "############################################"
 echo "Configurando una aplicación en ArgoCD desde el repositorio de GitHub"
 # Crear la aplicación en ArgoCD usando el app.yaml que se encuentra en el repositorio
-kubectl apply -f https://raw.githubusercontent.com/jotitadev/challenge-infra-malafar-k8s/main/app.yaml
+kubectl apply -f https://raw.githubusercontent.com/jotitadev/challenge-metafar-k8s/main/app.yaml
 
 # Esperar a que el servicio ArgoCD esté listo
 
