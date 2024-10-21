@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metafar-worker
+  namespace: metafar
+  labels:
+    app: metafar-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: metafar-worker
+  template:
+    metadata:
+      labels:
+        app: metafar-worker
+    spec:
+      containers:
+      - name: metafar-worker
+        image: jotaalv/metafar-worker:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "250m"
+      volumes:
+      - name: app-storage
+        emptyDir: {} # Puedes cambiar esto por un PVC si necesitas almacenamiento persistente
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: metafar-worker
+  namespace: metafar
+spec:
+  selector:
+    app: metafar-worker
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: metafar-worker-hpa
+  namespace: metafar
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: metafar-result
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 70
